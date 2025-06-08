@@ -95,7 +95,8 @@ Maximize CPU utilization by setting 16 workers:
 
 *Output:*
 
-![Screenshot 2025-06-07 225543](https://github.com/user-attachments/assets/218a76c1-3d0d-4ecb-a376-c7bb0f693d30)
+![Screenshot 2025-06-07 225543](https://github.com/user-attachments/assets/89e9a84f-3c17-48c1-9d9c-c7b35c0e2dd7)
+
 
 
 ### 3. Crack & Extract in One Step
