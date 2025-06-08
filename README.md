@@ -1,4 +1,4 @@
-# Rust ZIP Cracker v3.5
+# Rust ZIP Cracker v1.0
 
 A fast, accurate, and feature-rich brute-force password cracking tool for ZIP archives, written in Rust. This tool is designed to maximize multi-core CPU utilization, ensure memory safety, and keep resource usage minimal.
 
@@ -33,7 +33,7 @@ This method is best if you want to modify or manually build the project.
 
 ```bash
 # 1. Clone the repository (replace URL with your repo URL)
-git clone https://github.com/mfachri88/RustZipCracker.git
+git clone https://github.com/mfachri88/rust-zip-cracker.git
 
 # 2. Change into the project directory
 cd RustZipCracker
@@ -49,7 +49,7 @@ After building, the high-performance executable will be available at `target/rel
 This method installs the binary directly from the Git repository and makes it available as a terminal command.
 
 ```bash
-cargo install --git https://github.com/mfachri88/RustZipCracker.git
+cargo install --git https://github.com/mfachri88/rust-zip-cracker.git
 ```
 
 ## Usage
@@ -82,7 +82,7 @@ tools/run.sh -f <file.zip> -w <wordlist.txt> [other_options]
 Attempt to find the password with default settings:
 
 ```bash
-./target/release/rust_zip_cracker -f secret-archive.zip -w /usr/share/wordlists/rockyou.txt
+cargo run --release -- -f file.zip -w /usr/share/wordlists/rockyou.txt 
 ```
 
 ### 2. Using 16 Threads
@@ -95,9 +95,8 @@ Maximize CPU utilization by setting 16 workers:
 
 *Output:*
 
-```
-[===>     ] 10% | 1,434,439/14,344,393 | 15,023 pwd/s
-```
+![Screenshot 2025-06-07 225543](https://github.com/user-attachments/assets/218a76c1-3d0d-4ecb-a376-c7bb0f693d30)
+
 
 ### 3. Crack & Extract in One Step
 
