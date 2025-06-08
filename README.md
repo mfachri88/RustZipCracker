@@ -33,7 +33,7 @@ This method is best if you want to modify or manually build the project.
 
 ```bash
 # 1. Clone the repository (replace URL with your repo URL)
-git clone https://github.com/mfachri88/rust-zip-cracker.git
+git clone https://github.com/mfachri88/RustZipCracker.git
 
 # 2. Change into the project directory
 cd RustZipCracker
@@ -42,14 +42,14 @@ cd RustZipCracker
 cargo build --release
 ```
 
-After building, the high-performance executable will be available at `target/release/rust_zip_cracker`.
+After building, the high-performance executable will be available at `target/release/RustZipCracker`.
 
 ### 2. Via `cargo install`
 
 This method installs the binary directly from the Git repository and makes it available as a terminal command.
 
 ```bash
-cargo install --git https://github.com/mfachri88/rust-zip-cracker.git
+cargo install --git https://github.com/mfachri88/RustZipCracker.git
 ```
 
 ## Usage
@@ -58,7 +58,7 @@ Run the tool from the project’s root directory:
 
 ```bash
 # Run the built executable
-target/release/rust_zip_cracker -f <file.zip> -w <wordlist.txt> [other_options]
+target/release/RustZipCracker -f <file.zip> -w <wordlist.txt> [other_options]
 
 # Or run without separate build
 tools/run.sh -f <file.zip> -w <wordlist.txt> [other_options]
@@ -90,12 +90,13 @@ cargo run --release -- -f file.zip -w /usr/share/wordlists/rockyou.txt
 Maximize CPU utilization by setting 16 workers:
 
 ```bash
-./target/release/rust_zip_cracker -f project.zip -w passwords.txt -t 16
+./target/release/RustZipCracker -f project.zip -w passwords.txt -t 16
 ```
 
 *Output:*
 
-![Screenshot 2025-06-07 225543](https://github.com/user-attachments/assets/218a76c1-3d0d-4ecb-a376-c7bb0f693d30)
+![Screenshot 2025-06-07 225543](https://github.com/user-attachments/assets/89e9a84f-3c17-48c1-9d9c-c7b35c0e2dd7)
+
 
 
 ### 3. Crack & Extract in One Step
@@ -103,7 +104,7 @@ Maximize CPU utilization by setting 16 workers:
 Crack and automatically extract contents to `extracted_output` directory:
 
 ```bash
-./target/release/rust_zip_cracker -f important.zip -w rockyou.txt -o extracted_output
+./target/release/RustZipCracker -f important.zip -w rockyou.txt -o extracted_output
 ```
 
 ## Ethical Warning & License
