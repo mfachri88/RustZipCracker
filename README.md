@@ -2,7 +2,6 @@
 
 A fast, accurate, and feature-rich brute-force password cracking tool for ZIP archives, written in Rust. This tool is designed to maximize multi-core CPU utilization, ensure memory safety, and keep resource usage minimal.
 
-> **Note:** The screenshot shows the Go version, but the user interface in this Rust edition is very similar and even more informative.
 
 ## Description
 
@@ -34,7 +33,7 @@ This method is best if you want to modify or manually build the project.
 
 ```bash
 # 1. Clone the repository (replace URL with your repo URL)
-git clone https://github.com/YourUsername/RustZipCracker.git
+git clone https://github.com/mfachri88/RustZipCracker.git
 
 # 2. Change into the project directory
 cd RustZipCracker
@@ -50,7 +49,7 @@ After building, the high-performance executable will be available at `target/rel
 This method installs the binary directly from the Git repository and makes it available as a terminal command.
 
 ```bash
-cargo install --git https://github.com/YourUsername/RustZipCracker.git
+cargo install --git https://github.com/mfachri88/RustZipCracker.git
 ```
 
 ## Usage
