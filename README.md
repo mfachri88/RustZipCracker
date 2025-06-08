@@ -42,7 +42,7 @@ cd RustZipCracker
 cargo build --release
 ```
 
-After building, the high-performance executable will be available at `target/release/rust_zip_cracker`.
+After building, the high-performance executable will be available at `target/release/RustZipCracker`.
 
 ### 2. Via `cargo install`
 
@@ -58,7 +58,7 @@ Run the tool from the project’s root directory:
 
 ```bash
 # Run the built executable
-target/release/rust_zip_cracker -f <file.zip> -w <wordlist.txt> [other_options]
+target/release/RustZipCracker -f <file.zip> -w <wordlist.txt> [other_options]
 
 # Or run without separate build
 tools/run.sh -f <file.zip> -w <wordlist.txt> [other_options]
@@ -90,7 +90,7 @@ cargo run --release -- -f file.zip -w /usr/share/wordlists/rockyou.txt
 Maximize CPU utilization by setting 16 workers:
 
 ```bash
-./target/release/rust_zip_cracker -f project.zip -w passwords.txt -t 16
+./target/release/RustZipCracker -f project.zip -w passwords.txt -t 16
 ```
 
 *Output:*
@@ -103,7 +103,7 @@ Maximize CPU utilization by setting 16 workers:
 Crack and automatically extract contents to `extracted_output` directory:
 
 ```bash
-./target/release/rust_zip_cracker -f important.zip -w rockyou.txt -o extracted_output
+./target/release/RustZipCracker -f important.zip -w rockyou.txt -o extracted_output
 ```
 
 ## Ethical Warning & License
