@@ -33,7 +33,7 @@ This method is best if you want to modify or manually build the project.
 
 ```bash
 # 1. Clone the repository (replace URL with your repo URL)
-git clone https://github.com/mfachri88/rust-zip-cracker.git
+git clone https://github.com/mfachri88/RustZipCracker.git
 
 # 2. Change into the project directory
 cd RustZipCracker
@@ -49,7 +49,7 @@ After building, the high-performance executable will be available at `target/rel
 This method installs the binary directly from the Git repository and makes it available as a terminal command.
 
 ```bash
-cargo install --git https://github.com/mfachri88/rust-zip-cracker.git
+cargo install --git https://github.com/mfachri88/RustZipCracker.git
 ```
 
 ## Usage
