@@ -2,4 +2,4 @@
 /target/
 
 # Abaikan file lock Cargo jika tidak ingin membagikannya
-# Cargo.lock
+Cargo.lock

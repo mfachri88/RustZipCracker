@@ -9,9 +9,9 @@ use std::thread;
 use std::time::{Duration, Instant};
 use zip::result::ZipError;
 
-/// Sebuah tool brute-force password ZIP yang cepat, akurat, dan kaya fitur, ditulis dalam Rust.
+
 #[derive(Parser, Debug)]
-#[command(version = "3.5.1", author = "Gemini AI", about, long_about = None)]
+#[command(version = "1.0", about, long_about = None)]
 struct Cli {
     #[arg(short = 'f', long)]
     zip_file: PathBuf,
@@ -47,7 +47,7 @@ fn main() -> io::Result<()> {
     let attempted_count = Arc::new(AtomicU64::new(0));
 
     println!("========================================");
-    println!("    Rust ZIP Cracker v3.5.1 (Final)   ");
+    println!("    Rust ZIP Cracker v1.0             ");
     println!("========================================");
     println!("[+] File Target     : {}", cli.zip_file.display());
     println!("[+] Wordlist        : {} ({} passwords)", cli.wordlist.display(), total_passwords);
