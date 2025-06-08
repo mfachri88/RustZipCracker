@@ -1,0 +1,5 @@
+# Abaikan direktori hasil build dari Rust
+/target/
+
+# Abaikan file lock Cargo jika tidak ingin membagikannya
+# Cargo.lock

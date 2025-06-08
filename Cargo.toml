@@ -1,0 +1,20 @@
+[package]
+name = "rust_zip_cracker"
+version = "3.1.0"
+edition = "2021"
+
+[dependencies]
+# Untuk menangani file ZIP
+zip = "4.0.0"
+
+# Untuk mendapatkan jumlah inti CPU
+num_cpus = "1.16.0"
+
+# Untuk membuat antarmuka baris perintah (CLI) yang canggih
+clap = { version = "4.5.4", features = ["derive"] }
+
+# Untuk membuat progress bar yang indah
+indicatif = "0.17.8"
+
+# Untuk menangani sinyal Ctrl+C dengan anggun
+ctrlc = "3.4.4"
