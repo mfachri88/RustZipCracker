@@ -23,12 +23,16 @@ struct Cli {
     threads: Option<usize>,
 }
 
+/// Menghitung jumlah baris dalam file yang diberikan.
 fn count_lines(path: &Path) -> io::Result<u64> {
     let file = File::open(path)?;
     let reader = BufReader::new(file);
     Ok(reader.lines().count() as u64)
 }
 
+/// Fungsi utama aplikasi.
+/// Mengelola parsing argumen, inisialisasi, manajemen thread,
+/// dan koordinasi proses cracking ZIP.
 fn main() -> io::Result<()> {
     let cli = Cli::parse();
 
@@ -146,6 +150,8 @@ fn main() -> io::Result<()> {
     Ok(())
 }
 
+/// Mencoba mendekripsi file ZIP menggunakan password yang diberikan.
+/// Mengembalikan `true` jika password benar, `false` jika salah atau terjadi error.
 fn try_password(zip_path: &Path, password: &str) -> bool {
     let file = match File::open(zip_path) {
         Ok(f) => f,
@@ -170,6 +176,8 @@ fn try_password(zip_path: &Path, password: &str) -> bool {
 }
 
 
+/// Mencetak laporan akhir setelah proses cracking selesai atau dihentikan.
+/// Menampilkan waktu total, jumlah percobaan, kecepatan rata-rata, dan password jika ditemukan.
 fn print_final_report(found_password: &Option<String>, attempted: &Arc<AtomicU64>, total: u64, elapsed: Duration) {
     let attempted_count = attempted.load(Ordering::Relaxed);
     println!("\n----------------------------------------");
@@ -189,6 +197,7 @@ fn print_final_report(found_password: &Option<String>, attempted: &Arc<AtomicU64
 }
 
 
+/// Mengekstrak konten file ZIP ke direktori output menggunakan password yang ditemukan.
 fn extract_zip(zip_path: &Path, output_dir: &Path, password: &str) -> io::Result<()> {
     let file = File::open(zip_path)?;
     let mut archive = zip::ZipArchive::new(file)?;
@@ -210,7 +219,7 @@ fn extract_zip(zip_path: &Path, output_dir: &Path, password: &str) -> io::Result
                 if !p.exists() { std::fs::create_dir_all(p)?; }
             }
             let mut outfile = File::create(&outpath)?;
-            // --- INI ADALAH BARIS YANG DIPERBAIKI ---
+           
             io::copy(&mut file, &mut outfile)?;
         }
     }
